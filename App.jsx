@@ -187,31 +187,332 @@
 ////======================================//===============================//====================================
 //// StyleSheet Styling with some more properties for text button etc or more are in notes file
 
-import { StyleSheet, Text, View } from 'react-native';
-import React from 'react';
-import { SafeAreaView } from 'react-native-safe-area-context';
+// import {Pressable, StyleSheet, Text, View } from 'react-native';
+// import React from 'react';
+// import { SafeAreaView } from 'react-native-safe-area-context';
+
+// const App = () => {
+
+
+
+//   return (
+//     <SafeAreaView style={styles.container}>
+//       <Text style={styles.text}>hello world</Text>
+
+//       <Pressable style={styles.btn} >
+//         <Text style={styles.btn_name}>  Press Me </Text>
+//       </Pressable>
+//     </SafeAreaView>
+
+    
+//   );
+// };
+
+// export default App;
+
+// const styles = StyleSheet.create({
+//   container: {
+//     padding: 20,
+//     backgroundColor: "#a268c4",
+//     height: "100%",
+//     width: "100%",  
+//     gap:30,
+  
+//   },  
+
+//   text: {
+//     color: "#FFC29B",
+//     fontSize: 30,
+//     fontWeight: "bold",
+//     fontStyle: "italic"
+//   },  
+//   btn:{
+//     paading:10,
+//     backgroundColor:"skyblue",
+//     marginTop:70,
+//     alignItems:"center",
+//     width:200,
+//     marginLeft:100,
+//     borderRadius:10,
+//   },
+//   btn_name:{
+//     fontSize: 30,
+//     fontWeight: "bold",
+//   },
+// })
+
+
+//=======================================================//===============================//====================================
+
+//// Theam based styling (dark mode and light mode)
+
+// import React from 'react';
+// import { View, Text, StyleSheet ,useColorScheme} from 'react-native';
+// import { SafeAreaView } from 'react-native-safe-area-context';
+
+// const App = () => {
+
+//   const theme = useColorScheme()
+//   const isDarkMode = theme === 'dark';
+
+//   const backgroundColor = isDarkMode ? 'black' : 'white';
+//   const textcolor = isDarkMode ? 'white' : 'black';
+
+
+//   return (
+//     <SafeAreaView style={[styles.sav ,{backgroundColor: backgroundColor}]} >
+//       <Text style={[styles.tx,{color:textcolor}]}>Hello World!</Text>
+//     </SafeAreaView>
+//   );
+// };
+
+// export default App;
+
+// const styles = StyleSheet.create({
+//   sav: {
+//     height: "100%",
+//     width: "100%",
+//     justifyContent:"center",
+//     alignItems:"center"
+//   },
+//   tx: {
+//     fontSize: 30,
+//     fontWeight: "bold",
+//   }
+// });
+
+
+//=======================================================//===============================//====================================
+//// styling unit (px , dp , pt , % , em , rem)
+
+// import { StyleSheet, Text, View } from 'react-native'
+// import React from 'react'
+// import { SafeAreaView } from 'react-native-safe-area-context'
+
+// const App = () => {
+//   return (
+//     <SafeAreaView>
+//       <Text style={styles.tx}>App</Text>
+//     </SafeAreaView>
+//   )
+// }
+
+// export default App
+
+// const styles = StyleSheet.create({
+//   tx:{
+//     fontSize:30,          // pt
+//     // fontSize:30px,      // px
+//     // fontSize:30dp,     // dp
+//     // fontSize:30%,      // %  (not work in text)
+//     // fontSize:3em,     // em  (not work in text)
+//     // fontSize:3rem,    // rem  (not work in text)
+//   }
+// })
+
+
+//=======================================================//===============================//====================================
+//// Flex
+
+// import { StyleSheet, Text, View } from 'react-native'
+// import React from 'react'
+// // import { SafeAreaView } from 'react-native-safe-area-context'
+
+// const App = () => {
+//   return (
+//     <View style={styles.sav}>
+//       <View style={styles.v} />
+//       <View style={styles.v1} />
+//       <View style={styles.v2} />
+//     </View>
+//   )
+// }  
+
+// export default App
+
+// //// flex:1 means full screen
+// //// flex:1/2 means half screen
+// //// flex:1/3 means one third screen
+// //// flex:2 means two part of full screen
+// //// flex:3 means three part of full screen
+// //// flex:2 and flex:3 means 2+3=5 parts of full screen so 2 part is for flex:2 and 3 part is for flex:3
+// ////1+2+3=6  
+// ////1/6 , 2/6 , 3/6
+
+
+// const styles = StyleSheet.create({
+//   sav:{
+//     flex:1,      // for full screen  
+//     // flex:1/2,  // for half screen
+//     backgroundColor:"lightblue"
+  
+//   },
+//   v:{
+//     flex:1,
+//     backgroundColor:"red",
+//   },
+//   v1:{
+//     flex:2,
+//     backgroundColor:"green",
+//   },
+//   v2:{
+//     flex:3,
+//     backgroundColor:"yellow",
+//   }
+// })
+
+
+//=======================================================//===============================//====================================
+//// Flex Direction (row , column , row-reverse , column-reverse)
+
+// import { StyleSheet, Text, View } from 'react-native'
+// import React from 'react'
+
+// const App = () => {
+//   return (
+//     <View style={styles.sav}>
+//       <View style={styles.v} />
+//       <View style={styles.v1} />
+//       <View style={styles.v2} />
+//     </View>
+//   )
+// }  
+
+// export default App
+
+// const styles = StyleSheet.create({
+//   sav:{
+//     flex:1,   
+//     backgroundColor:"lightblue",
+//     flexDirection:"row-reverse" // row , column , row-reverse , column-reverse
+//   },
+//   v:{
+//     width:80,
+//     height:80,
+//     backgroundColor:"red",
+//   },
+//   v1:{
+//     width:80,
+//     height:80,
+//     backgroundColor:"green",
+//   },
+//   v2:{
+//     width:80,
+//     height:80,
+//     backgroundColor:"yellow",
+//   }
+// })
+
+////=======================================================//===============================//====================================
+//// Justify , align items  , aling self  
+
+//// Justify Content (flex-start , flex-end , center , space-between , space-around , space-evenly)
+
+//// Justify content is used for main axis (primary axis) in flexbox
+
+//// align Items (flex-start , flex-end , center , stretch , baseline)
+
+//// align items is used for cross axis (secondary axis) in flexbox
+
+//// align self it was work on child 
+
+// import { StyleSheet, Text, View } from 'react-native'
+// import React from 'react'
+
+// const App = () => {
+//   return (
+//     <View style={styles.sav}>
+//       <View style={styles.v} />
+//       <View style={styles.v1} />
+//       <View style={styles.v2} />
+//     </View>
+//   )
+// }  
+
+// export default App
+
+// const styles = StyleSheet.create({
+//   sav:{
+//     flex:1,   
+//     backgroundColor:"lightblue",
+//     flexDirection:"row" ,
+//     justifyContent:"space-evenly",  // flex-start , flex-end , center , space-between , space-around , space-evenly
+//     alignItems:"stretch"        // flex-start , flex-end , center , stretch , baseline
+//   },
+//   v:{
+//     width:80,
+//     height:80,  
+//     backgroundColor:"red",
+//     alignSelf:"flex-end"   // alignSelf is used for single item (flex-start , flex-end , center , stretch , baseline)
+//   },
+//   v1:{
+//     width:80,
+//     height:80,
+//     backgroundColor:"green",
+//   },
+//   v2:{
+//     width:80,
+//     height:80,
+//     backgroundColor:"yellow",
+//   }
+// })
+
+//=======================================================//===============================//====================================  
+
+//// wraping (wrap , nowrap , wrap-reverse)
+//// align content (flex-start , flex-end , center , space-between , space-around , space-evenly)
+
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <Text style={styles.text}>App</Text>
-    </SafeAreaView>
+     <View style={styles.sav}>
+         <View style={styles.v} />
+         <View style={styles.v1} />
+         <View style={styles.v2} />
+         <View style={styles.v} />
+         <View style={styles.v1} />
+         <View style={styles.v2} />
+         <View style={styles.v} />
+         <View style={styles.v1} />
+         <View style={styles.v2} />
+         <View style={styles.v} />
+         <View style={styles.v1} />
+         <View style={styles.v2} />
+         <View style={styles.v} />
+         <View style={styles.v1} />
+         <View style={[styles.v2 , {backgroundColor:"blue"}]} />
 
-    
-  );
-};
+     </View>
+  )
+}
 
-export default App;
+export default App
 
 const styles = StyleSheet.create({
-  text: {
-    color: "red",
-    fontSize: 30,
-    fontWeight: "bold",
-    fontStyle: "italic"
-  },  
-
-
-
-  
+    sav:{
+    flex:1,   
+    backgroundColor:"lightblue",
+    flexDirection:"column" ,
+    // justifyContent:"center",  
+    alignItems:"center",    
+    alignContent:"center",  // flex-start , flex-end , center , space-between , space-around , space-evenly
+    flexWrap:"wrap"   // wrap , nowrap , wrap-reverse    
+    },
+  v:{
+    width:80,
+    height:80,  
+    backgroundColor:"red",  
+  },
+  v1:{
+    width:80,
+    height:80,
+    backgroundColor:"green",
+  },
+  v2:{
+    width:80,
+    height:80,
+    backgroundColor:"yellow",
+  }
 })
