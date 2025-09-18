@@ -1,6 +1,11 @@
 //// For run the code phone via usb then use this cmd "npx react-native run-android"
 ////adb devices  for check the device is connected or not
 ////rnfes
+//// npm start
+//// npx react-native start
+//// npx react-native run-android
+
+//=======================================================//===============================//====================================
 
 
 // // text display
@@ -462,12 +467,117 @@
 //// wraping (wrap , nowrap , wrap-reverse)
 //// align content (flex-start , flex-end , center , space-between , space-around , space-evenly)
 
-import { StyleSheet, Text, View } from 'react-native'
+// import { StyleSheet, Text, View } from 'react-native'
+// import React from 'react'
+
+// const App = () => {
+//   return (
+//      <View style={styles.sav}>
+//          <View style={styles.v} />
+//          <View style={styles.v1} />
+//          <View style={styles.v2} />
+//          <View style={styles.v} />
+//          <View style={styles.v1} />
+//          <View style={styles.v2} />
+//          <View style={styles.v} />
+//          <View style={styles.v1} />
+//          <View style={styles.v2} />
+//          <View style={styles.v} />
+//          <View style={styles.v1} />
+//          <View style={styles.v2} />
+//          <View style={styles.v} />
+//          <View style={styles.v1} />
+//          <View style={[styles.v2 , {backgroundColor:"blue"}]} />
+
+//      </View>
+//   )
+// }
+
+// export default App
+
+// const styles = StyleSheet.create({
+//     sav:{
+//     flex:1,   
+//     backgroundColor:"lightblue",
+//     flexDirection:"column" ,
+//     // justifyContent:"center",  
+//     alignItems:"center",    
+//     alignContent:"center",  // flex-start , flex-end , center , space-between , space-around , space-evenly
+//     flexWrap:"wrap"   // wrap , nowrap , wrap-reverse    
+//     },
+//   v:{
+//     width:80,
+//     height:80,  
+//     backgroundColor:"red",  
+//   },
+//   v1:{
+//     width:80,
+//     height:80,
+//     backgroundColor:"green",
+//   },
+//   v2:{
+//     width:80,
+//     height:80,
+//     backgroundColor:"yellow",
+//   }
+// })
+
+
+////=======================================================//===============================//====================================
+//// flexgrow
+
+
+// import { StyleSheet, Text, View } from 'react-native'
+// import React from 'react'
+// import { SafeAreaView } from 'react-native-safe-area-context'
+
+// const App = () => {
+//   return (
+//     <SafeAreaView style={styles.sav}>
+//         <View style={styles.v} />
+//         <View style={styles.v1} />
+//         <View style={styles.v2} />
+//     </SafeAreaView>
+//   )
+// }
+
+// export default App
+
+// const styles = StyleSheet.create({
+//     sav:{
+//     flex:1,   
+//     backgroundColor:"lightblue",
+//     flexDirection:"row" ,
+//     justifyContent:"center",   
+//     },
+//   v:{
+//     width:80,
+//     height:80,  
+//     backgroundColor:"red",  
+//   },
+//   v1:{
+//     width:80,
+//     height:80,
+//     backgroundColor:"green",
+//     flexGrow:1,   // flexGrow is used for increase the size of the item
+//   },
+//   v2:{
+//     width:80,
+//     height:80,
+//     backgroundColor:"yellow",
+//   }
+// })
+
+////=======================================================//===============================//====================================
+//// ScrollView
+
+import { StyleSheet, Text, View, ScrollView } from 'react-native'
 import React from 'react'
+// import { SafeAreaView } from 'react-native-safe-area-context'
 
 const App = () => {
   return (
-     <View style={styles.sav}>
+     <ScrollView style={styles.sav}>
          <View style={styles.v} />
          <View style={styles.v1} />
          <View style={styles.v2} />
@@ -482,23 +592,30 @@ const App = () => {
          <View style={styles.v2} />
          <View style={styles.v} />
          <View style={styles.v1} />
-         <View style={[styles.v2 , {backgroundColor:"blue"}]} />
-
-     </View>
+         <View style={styles.v2} />
+         <View style={styles.v} />
+         <View style={styles.v1} />
+         <View style={styles.v2} />
+         <View style={styles.v} />
+         <View style={styles.v1} />
+         <View style={styles.v2} />
+         <View style={styles.v} />
+         <View style={styles.v1} />
+         <View style={styles.v2} />
+         <View style={styles.v} />
+         <View style={styles.v1} />
+         <View style={styles.v2} />
+     </ScrollView>
   )
 }
 
-export default App
+export default App;
 
 const styles = StyleSheet.create({
     sav:{
     flex:1,   
     backgroundColor:"lightblue",
     flexDirection:"column" ,
-    // justifyContent:"center",  
-    alignItems:"center",    
-    alignContent:"center",  // flex-start , flex-end , center , space-between , space-around , space-evenly
-    flexWrap:"wrap"   // wrap , nowrap , wrap-reverse    
     },
   v:{
     width:80,
@@ -508,7 +625,7 @@ const styles = StyleSheet.create({
   v1:{
     width:80,
     height:80,
-    backgroundColor:"green",
+    backgroundColor:"green", 
   },
   v2:{
     width:80,
@@ -516,3 +633,4 @@ const styles = StyleSheet.create({
     backgroundColor:"yellow",
   }
 })
+
