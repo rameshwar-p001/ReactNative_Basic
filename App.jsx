@@ -6,7 +6,7 @@
 //// npx react-native run-android
 
 //=======================================================//===============================//====================================
-
+//// day 1
 
 // // text display
 
@@ -88,6 +88,8 @@
 
 
 //=======================================================//===============================//====================================
+//// day 2
+
 //// SafeAreaView for avoid notch area in mobiles
 
 // import { StyleSheet, Text ,Pressable} from 'react-native'
@@ -113,6 +115,7 @@
 
 // //Styling start ..
 //=======================================================//===============================//====================================
+////` day 3
 // // inline styling
 
 
@@ -190,6 +193,8 @@
 // export default App
 
 ////======================================//===============================//====================================
+////day 4
+
 //// StyleSheet Styling with some more properties for text button etc or more are in notes file
 
 // import {Pressable, StyleSheet, Text, View } from 'react-native';
@@ -524,6 +529,7 @@
 
 
 ////=======================================================//===============================//====================================
+//// day 5
 //// flexgrow
 
 
@@ -570,67 +576,103 @@
 
 ////=======================================================//===============================//====================================
 //// ScrollView
+//// contentContainerStyle
 
-import { StyleSheet, Text, View, ScrollView } from 'react-native'
+// import { StyleSheet, Text, View, ScrollView, SafeAreaView } from 'react-native'
+// import React from 'react'
+
+// const App = () => {
+//   return (
+//     <SafeAreaView style={{ flex: 1, backgroundColor: 'lightblue' }}>
+//       <ScrollView 
+//         contentContainerStyle={{ gap: 10, paddingVertical: 20 }}
+//         horizontal={true}
+//         style={styles.scrollView}>
+//           <View style={styles.v01} />
+//           <View style={styles.v1} />
+//           <View style={styles.v2} />
+//           <View style={styles.v} />
+//           <View style={styles.v1} />
+//           <View style={styles.v2} />
+//           <View style={styles.v} />
+//           <View style={styles.v1} />
+//           <View style={styles.v2} />
+//           <View style={styles.v} />
+//           <View style={styles.v1} />
+//           <View style={styles.v2} />
+//           <View style={styles.v} />
+//           <View style={styles.v1} />
+//           <View style={styles.v2} />
+//           <View style={styles.v} />
+//           <View style={styles.v1} />
+//           <View style={styles.v2} />
+//           <View style={styles.v} />
+//           <View style={styles.v1} />
+//           <View style={styles.v2} />
+//           <View style={styles.v} />
+//           <View style={styles.v1} />
+//           <View style={styles.v2} />
+//           <View style={styles.v} />
+//           <View style={styles.v1} />
+//           <View style={styles.v002} />
+//       </ScrollView>
+//     </SafeAreaView>
+//   )
+// }
+
+// export default App;
+
+// const styles = StyleSheet.create({
+//     scrollView: {
+//       flex: 1,
+//       padding: 10,
+//     },
+//     v: {
+//       width: 80,
+//       height: 80,  
+//       backgroundColor: "red",  
+//       borderRadius: 50,
+//     },
+//     v1: {
+//       width: 80,
+//       height: 80,
+//       backgroundColor: "green", 
+//       borderRadius: 50,
+//     },
+//     v2: {
+//       width: 80,
+//       height: 80,
+//       backgroundColor: "yellow",
+//       borderRadius: 50,
+//     },
+//     v01: {
+//       width: 80,
+//       height: 80,
+//       backgroundColor: "black",
+//       borderRadius: 50,
+//     },
+//     v002: {
+//       width: 80,
+//       height: 80,
+//       backgroundColor: "purple",
+//       borderRadius: 50,
+//     }
+// })
+
+////=======================================================//===============================//====================================
+//// FlatList
+
+import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-// import { SafeAreaView } from 'react-native-safe-area-context'
 
 const App = () => {
   return (
-     <ScrollView style={styles.sav}>
-         <View style={styles.v} />
-         <View style={styles.v1} />
-         <View style={styles.v2} />
-         <View style={styles.v} />
-         <View style={styles.v1} />
-         <View style={styles.v2} />
-         <View style={styles.v} />
-         <View style={styles.v1} />
-         <View style={styles.v2} />
-         <View style={styles.v} />
-         <View style={styles.v1} />
-         <View style={styles.v2} />
-         <View style={styles.v} />
-         <View style={styles.v1} />
-         <View style={styles.v2} />
-         <View style={styles.v} />
-         <View style={styles.v1} />
-         <View style={styles.v2} />
-         <View style={styles.v} />
-         <View style={styles.v1} />
-         <View style={styles.v2} />
-         <View style={styles.v} />
-         <View style={styles.v1} />
-         <View style={styles.v2} />
-         <View style={styles.v} />
-         <View style={styles.v1} />
-         <View style={styles.v2} />
-     </ScrollView>
+    <View>
+      <Text>App</Text>
+    </View>
   )
 }
 
-export default App;
+export default App
 
-const styles = StyleSheet.create({
-    sav:{
-    flex:1,   
-    backgroundColor:"lightblue",
-    flexDirection:"column" ,
-    },
-  v:{
-    width:80,
-    height:80,  
-    backgroundColor:"red",  
-  },
-  v1:{
-    width:80,
-    height:80,
-    backgroundColor:"green", 
-  },
-  v2:{
-    width:80,
-    height:80,
-    backgroundColor:"yellow",
-  }
-})
-
+const styles = StyleSheet.create({})
