@@ -662,17 +662,88 @@
 ////=======================================================//===============================//====================================
 //// FlatList
 
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View,Image,FlatList } from 'react-native'
+// import React from 'react'
+import { SafeAreaView } from 'react-native-safe-area-context'
+const dummyData = [
+  { id: '1', name: 'John Doe', email: 'johndoe@gmail.com', image: 'https://randomuser.me/api/portraits/men/1.jpg' },
+  { id: '2', name: 'Jane Smith', email: 'janesmith@gmail.com', image: 'https://randomuser.me/api/portraits/women/2.jpg' },
+  { id: '3', name: 'Michael Johnson', email: 'michaelj@gmail.com', image: 'https://randomuser.me/api/portraits/men/3.jpg' },
+  { id: '4', name: 'Emily Davis', email: 'emilydavis@gmail.com', image: 'https://randomuser.me/api/portraits/women/4.jpg' },
+  { id: '5', name: 'David Wilson', email: 'davidwilson@gmail.com', image: 'https://randomuser.me/api/portraits/men/5.jpg' },
+  { id: '6', name: 'Sophia Brown', email: 'sophiabrown@gmail.com', image: 'https://randomuser.me/api/portraits/women/6.jpg' },
+  { id: '7', name: 'Daniel Miller', email: 'danielmiller@gmail.com', image: 'https://randomuser.me/api/portraits/men/7.jpg' },
+  { id: '8', name: 'Olivia Taylor', email: 'oliviataylor@gmail.com', image: 'https://randomuser.me/api/portraits/women/8.jpg' },
+  { id: '9', name: 'James Anderson', email: 'jamesanderson@gmail.com', image: 'https://randomuser.me/api/portraits/men/9.jpg' },
+  { id: '10', name: 'Isabella Thomas', email: 'isabellathomas@gmail.com', image: 'https://randomuser.me/api/portraits/women/10.jpg' },
+  { id: '11', name: 'Ethan Martinez', email: 'ethanmartinez@gmail.com', image: 'https://randomuser.me/api/portraits/men/11.jpg' },
+  { id: '12', name: 'Mia Garcia', email: 'miagarcia@gmail.com', image: 'https://randomuser.me/api/portraits/women/12.jpg' },
+  { id: '13', name: 'Alexander Lee', email: 'alexlee@gmail.com', image: 'https://randomuser.me/api/portraits/men/13.jpg' },
+  { id: '14', name: 'Charlotte Harris', email: 'charlotteharris@gmail.com', image: 'https://randomuser.me/api/portraits/women/14.jpg' },
+  { id: '15', name: 'Benjamin Clark', email: 'benjaminclark@gmail.com', image: 'https://randomuser.me/api/portraits/men/15.jpg' },
+  { id: '16', name: 'Lucas Walker', email: 'lucaswalker@gmail.com', image: 'https://randomuser.me/api/portraits/men/16.jpg' },
+  { id: '17', name: 'Amelia Hall', email: 'ameliahall@gmail.com', image: 'https://randomuser.me/api/portraits/women/17.jpg' },
+  { id: '18', name: 'Henry Allen', email: 'henryallen@gmail.com', image: 'https://randomuser.me/api/portraits/men/18.jpg' },
+  { id: '19', name: 'Ella Young', email: 'ellayoung@gmail.com', image: 'https://randomuser.me/api/portraits/women/19.jpg' },
+  { id: '20', name: 'Matthew King', email: 'matthewking@gmail.com', image: 'https://randomuser.me/api/portraits/men/20.jpg' },
+  { id: '21', name: 'Avery Wright', email: 'averywright@gmail.com', image: 'https://randomuser.me/api/portraits/women/21.jpg' },
+  { id: '22', name: 'Joseph Scott', email: 'josephscott@gmail.com', image: 'https://randomuser.me/api/portraits/men/22.jpg' },
+  { id: '23', name: 'Grace Adams', email: 'graceadams@gmail.com', image: 'https://randomuser.me/api/portraits/women/23.jpg' },
+  { id: '24', name: 'Samuel Baker', email: 'samuelbaker@gmail.com', image: 'https://randomuser.me/api/portraits/men/24.jpg' },
+  { id: '25', name: 'Harper Nelson', email: 'harpernelson@gmail.com', image: 'https://randomuser.me/api/portraits/women/25.jpg' },
+  { id: '26', name: 'Andrew Carter', email: 'andrewcarter@gmail.com', image: 'https://randomuser.me/api/portraits/men/26.jpg' },
+  { id: '27', name: 'Evelyn Mitchell', email: 'evelynmitchell@gmail.com', image: 'https://randomuser.me/api/portraits/women/27.jpg' },
+  { id: '28', name: 'Christopher Perez', email: 'chrisperez@gmail.com', image: 'https://randomuser.me/api/portraits/men/28.jpg' },
+  { id: '29', name: 'Abigail Roberts', email: 'abigailroberts@gmail.com', image: 'https://randomuser.me/api/portraits/women/29.jpg' },
+  { id: '30', name: 'Logan Turner', email: 'loganturner@gmail.com', image: 'https://randomuser.me/api/portraits/men/30.jpg' },
+];
+
 
 const App = () => {
   return (
-    <View>
-      <Text>App</Text>
-    </View>
+    <SafeAreaView style={styles.sav}>
+
+    <FlatList
+    
+        data={dummyData}
+        renderItem={({item})=>(
+          <View style={styles.v}>
+        <Image
+          style={{ width: 50, height: 50 , borderRadius:50}}
+          source={{uri:"https://images.unsplash.com/photo-1741332966044-513c26163864?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2fHx8ZW58MHx8fHx8"}} />
+        <Text>App</Text>
+        <Text>App</Text>
+      </View>
+        )}
+        keyExtractor={item=>item.id}
+        numColumns={3}
+        columnWrapperStyle={{gap:10}}
+        ItemSeparatorComponent={<View style={{height:10}}/>}
+    />
+     
+  
+    </SafeAreaView>
+    
   )
 }
 
 export default App
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  sav:{
+    width:"100%",
+    height:"100%",
+    backgroundColor:"lightblue",
+    paddingHorizontal:5,
+    paddingVertical:10,
+  },
+  v:{
+    width:100,
+    height:100,
+    backgroundColor:"white",
+    borderRadius:10,
+    padding:5,
+    alignItems:"center",
+  },
+
+})
