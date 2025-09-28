@@ -1,12 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View,Button } from 'react-native'
 import React from 'react'
 
-export default function Coustm() {
+const Coustm = ({navigation}) => {
   return (
     <View>
       <Text>Coustm</Text>
+            <Button title="Login" onPress={()=>navigation.navigate("Login")}/>
+      
     </View>
   )
 }
+
+export default Coustm
 
 const styles = StyleSheet.create({})

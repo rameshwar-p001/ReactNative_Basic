@@ -837,6 +837,8 @@ import Login from './src/Screen/Login';
 import Coustm from './src/Screen/Coustm';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
+import 'react-native-gesture-handler';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 
 
@@ -854,11 +856,12 @@ const StackNavigator = () => {
 
 const App = () => {
   return (
-    
-        <NavigationContainer>
-          <StackNavigator />
-        </NavigationContainer>
-    
+    // Bas isko yahan add karna hai
+    <GestureHandlerRootView style={{ flex: 1 }}> 
+      <NavigationContainer>
+        <StackNavigator />
+      </NavigationContainer>
+    </GestureHandlerRootView>
   );
 };
 
