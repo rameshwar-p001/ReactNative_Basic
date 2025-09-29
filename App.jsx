@@ -36,7 +36,7 @@
 // const App = () => {
 //   return (
 //     <View style={styles.container}>
-//       <Image 
+//       <Image
 //         style={{ width: 450, height: 1000 }}
 //         source={{ uri: "https://i.pinimg.com/736x/6e/fd/46/6efd46d9e838154cc665a51334ebfcdf.jpg" }}
 //       />
@@ -53,7 +53,6 @@
 
 ////` Button , TouchableOpacity , TouchableHighlight , Pressable
 
-
 // import { StyleSheet, Text, View ,Button, TouchableOpacity,TouchableHighlight, Pressable} from 'react-native'
 // import React from 'react'
 
@@ -62,18 +61,18 @@
 //     <View>
 //       {/* <Button title='Press Me'></Button> */}
 
-//       {/* <TouchableOpacity style={{padding:10,backgroundColor:"skyblue",marginTop:70}} 
+//       {/* <TouchableOpacity style={{padding:10,backgroundColor:"skyblue",marginTop:70}}
 //                                 onPress={()=>alert("Hello World")}>
 //         <Text>Press Me</Text>`
 //       </TouchableOpacity> */}
 
-//       {/* <TouchableHighlight style={{padding:10,backgroundColor:"skyblue",marginTop:70}} 
+//       {/* <TouchableHighlight style={{padding:10,backgroundColor:"skyblue",marginTop:70}}
 //                                 onPress={()=>alert("Hello World")}>
 //         <Text>Press Me</Text>
 //       </TouchableHighlight> */}
 
 //         {/* Pressable is more advance than TouchableOpacity , TouchableHighlight , Button*/}
-//       <Pressable style={{padding:10,backgroundColor:"skyblue",marginTop:70}} 
+//       <Pressable style={{padding:10,backgroundColor:"skyblue",marginTop:70}}
 //                                 onPress={()=>alert("Hello World")}>
 //         <Text>Press Me</Text>
 //       </Pressable>
@@ -82,10 +81,8 @@
 //   );
 // };
 
-
 // const styles = StyleSheet.create({});
-// export default App; 
-
+// export default App;
 
 //=======================================================//===============================//====================================
 //// day 2
@@ -99,11 +96,11 @@
 // const App = () => {
 //   return (
 //     <SafeAreaView>
-//        <Pressable style={{padding:10,backgroundColor:"skyblue"}} 
+//        <Pressable style={{padding:10,backgroundColor:"skyblue"}}
 //                                 onPress={()=>alert("Hello World")}>
 //          <Text>Press Me</Text>
 //        </Pressable>
-//     </SafeAreaView>  
+//     </SafeAreaView>
 //   )
 // }
 
@@ -111,13 +108,10 @@
 
 // const styles = StyleSheet.create({})
 
-
-
 // //Styling start ..
 //=======================================================//===============================//====================================
 ////` day 3
 // // inline styling
-
 
 // import { StyleSheet, Text, View } from 'react-native'
 // import React from 'react'
@@ -135,10 +129,9 @@
 
 // export default App
 
-
 //=======================================================//===============================//====================================
 
-//// StyleSheet Styling 
+//// StyleSheet Styling
 
 // import { StyleSheet, Text, View } from 'react-native'
 // import React from 'react'
@@ -146,9 +139,9 @@
 
 // const App = () => {
 //   return (
-//     <SafeAreaView style={styles.sav}>     
+//     <SafeAreaView style={styles.sav}>
 //                                           {/* style={styles.sav} it was the object name where we was do styleSheet styling object called */}
-//       <Text style={styles.Text}>          
+//       <Text style={styles.Text}>
 //                                           {/* style={styles.Text} it was the object name where we was do styleSheet styling object called */}
 //         Hello World
 //       </Text>
@@ -158,7 +151,7 @@
 
 // export default App
 
-// const styles = StyleSheet.create({          // object was created object name styles 
+// const styles = StyleSheet.create({          // object was created object name styles
 //   sav:{
 //     height:"100%",
 //     width:"100%",
@@ -181,9 +174,9 @@
 
 // const App = () => {
 //   return (
-//     <SafeAreaView style={style.sav}>     
-                                         
-//       <Text style={style.Text}>                                        
+//     <SafeAreaView style={style.sav}>
+
+//       <Text style={style.Text}>
 //         Hello World
 //       </Text>
 //     </SafeAreaView>
@@ -203,8 +196,6 @@
 
 // const App = () => {
 
-
-
 //   return (
 //     <SafeAreaView style={styles.container}>
 //       <Text style={styles.text}>hello world</Text>
@@ -214,7 +205,6 @@
 //       </Pressable>
 //     </SafeAreaView>
 
-    
 //   );
 // };
 
@@ -225,17 +215,17 @@
 //     padding: 20,
 //     backgroundColor: "#a268c4",
 //     height: "100%",
-//     width: "100%",  
+//     width: "100%",
 //     gap:30,
-  
-//   },  
+
+//   },
 
 //   text: {
 //     color: "#FFC29B",
 //     fontSize: 30,
 //     fontWeight: "bold",
 //     fontStyle: "italic"
-//   },  
+//   },
 //   btn:{
 //     paading:10,
 //     backgroundColor:"skyblue",
@@ -250,7 +240,6 @@
 //     fontWeight: "bold",
 //   },
 // })
-
 
 //=======================================================//===============================//====================================
 
@@ -267,7 +256,6 @@
 
 //   const backgroundColor = isDarkMode ? 'black' : 'white';
 //   const textcolor = isDarkMode ? 'white' : 'black';
-
 
 //   return (
 //     <SafeAreaView style={[styles.sav ,{backgroundColor: backgroundColor}]} >
@@ -290,7 +278,6 @@
 //     fontWeight: "bold",
 //   }
 // });
-
 
 //=======================================================//===============================//====================================
 //// styling unit (px , dp , pt , % , em , rem)
@@ -320,7 +307,6 @@
 //   }
 // })
 
-
 //=======================================================//===============================//====================================
 //// Flex
 
@@ -336,7 +322,7 @@
 //       <View style={styles.v2} />
 //     </View>
 //   )
-// }  
+// }
 
 // export default App
 
@@ -346,16 +332,15 @@
 // //// flex:2 means two part of full screen
 // //// flex:3 means three part of full screen
 // //// flex:2 and flex:3 means 2+3=5 parts of full screen so 2 part is for flex:2 and 3 part is for flex:3
-// ////1+2+3=6  
+// ////1+2+3=6
 // ////1/6 , 2/6 , 3/6
-
 
 // const styles = StyleSheet.create({
 //   sav:{
-//     flex:1,      // for full screen  
+//     flex:1,      // for full screen
 //     // flex:1/2,  // for half screen
 //     backgroundColor:"lightblue"
-  
+
 //   },
 //   v:{
 //     flex:1,
@@ -371,7 +356,6 @@
 //   }
 // })
 
-
 //=======================================================//===============================//====================================
 //// Flex Direction (row , column , row-reverse , column-reverse)
 
@@ -386,13 +370,13 @@
 //       <View style={styles.v2} />
 //     </View>
 //   )
-// }  
+// }
 
 // export default App
 
 // const styles = StyleSheet.create({
 //   sav:{
-//     flex:1,   
+//     flex:1,
 //     backgroundColor:"lightblue",
 //     flexDirection:"row-reverse" // row , column , row-reverse , column-reverse
 //   },
@@ -415,7 +399,7 @@
 
 ////=======================================================//===============================//====================================
 // //day 5
-//// Justify , align items  , aling self  
+//// Justify , align items  , aling self
 
 //// Justify Content (flex-start , flex-end , center , space-between , space-around , space-evenly)
 
@@ -425,7 +409,7 @@
 
 //// align items is used for cross axis (secondary axis) in flexbox
 
-//// align self it was work on child 
+//// align self it was work on child
 
 // import { StyleSheet, Text, View } from 'react-native'
 // import React from 'react'
@@ -438,13 +422,13 @@
 //       <View style={styles.v2} />
 //     </View>
 //   )
-// }  
+// }
 
 // export default App
 
 // const styles = StyleSheet.create({
 //   sav:{
-//     flex:1,   
+//     flex:1,
 //     backgroundColor:"lightblue",
 //     flexDirection:"row" ,
 //     justifyContent:"space-evenly",  // flex-start , flex-end , center , space-between , space-around , space-evenly
@@ -452,7 +436,7 @@
 //   },
 //   v:{
 //     width:80,
-//     height:80,  
+//     height:80,
 //     backgroundColor:"red",
 //     alignSelf:"flex-end"   // alignSelf is used for single item (flex-start , flex-end , center , stretch , baseline)
 //   },
@@ -468,7 +452,7 @@
 //   }
 // })
 
-//=======================================================//===============================//====================================  
+//=======================================================//===============================//====================================
 
 //// wraping (wrap , nowrap , wrap-reverse)
 //// align content (flex-start , flex-end , center , space-between , space-around , space-evenly)
@@ -503,18 +487,18 @@
 
 // const styles = StyleSheet.create({
 //     sav:{
-//     flex:1,   
+//     flex:1,
 //     backgroundColor:"lightblue",
 //     flexDirection:"column" ,
-//     // justifyContent:"center",  
-//     alignItems:"center",    
+//     // justifyContent:"center",
+//     alignItems:"center",
 //     alignContent:"center",  // flex-start , flex-end , center , space-between , space-around , space-evenly
-//     flexWrap:"wrap"   // wrap , nowrap , wrap-reverse    
+//     flexWrap:"wrap"   // wrap , nowrap , wrap-reverse
 //     },
 //   v:{
 //     width:80,
-//     height:80,  
-//     backgroundColor:"red",  
+//     height:80,
+//     backgroundColor:"red",
 //   },
 //   v1:{
 //     width:80,
@@ -528,11 +512,9 @@
 //   }
 // })
 
-
 ////=======================================================//===============================//====================================
 //// day 6
 //// flexgrow
-
 
 // import { StyleSheet, Text, View } from 'react-native'
 // import React from 'react'
@@ -552,15 +534,15 @@
 
 // const styles = StyleSheet.create({
 //     sav:{
-//     flex:1,   
+//     flex:1,
 //     backgroundColor:"lightblue",
 //     flexDirection:"row" ,
-//     justifyContent:"center",   
+//     justifyContent:"center",
 //     },
 //   v:{
 //     width:80,
-//     height:80,  
-//     backgroundColor:"red",  
+//     height:80,
+//     backgroundColor:"red",
 //   },
 //   v1:{
 //     width:80,
@@ -586,7 +568,7 @@
 // const App = () => {
 //   return (
 //     <SafeAreaView style={{ flex: 1, backgroundColor: 'lightblue' }}>
-//       <ScrollView 
+//       <ScrollView
 //         contentContainerStyle={{ gap: 10, paddingVertical: 20 }}
 //         horizontal={true}
 //         style={styles.scrollView}>
@@ -631,14 +613,14 @@
 //     },
 //     v: {
 //       width: 80,
-//       height: 80,  
-//       backgroundColor: "red",  
+//       height: 80,
+//       backgroundColor: "red",
 //       borderRadius: 50,
 //     },
 //     v1: {
 //       width: 80,
 //       height: 80,
-//       backgroundColor: "green", 
+//       backgroundColor: "green",
 //       borderRadius: 50,
 //     },
 //     v2: {
@@ -700,13 +682,12 @@
 //   { id: '30', name: 'Logan Turner', email: 'loganturner@gmail.com', image: 'https://randomuser.me/api/portraits/men/30.jpg' },
 // ];
 
-
 // const App = () => {
 //   return (
 //     <SafeAreaView style={styles.sav}>
 
 //     <FlatList
-    
+
 //         data={dummyData}
 //         renderItem={({item})=>(
 //           <View style={styles.v}>
@@ -722,10 +703,9 @@
 //         columnWrapperStyle={{gap:10}}
 //         ItemSeparatorComponent={<View style={{height:10}}/>}
 //     />
-     
-  
+
 //     </SafeAreaView>
-    
+
 //   )
 // }
 
@@ -751,7 +731,7 @@
 // })
 
 ////=======================================================//===============================//====================================
-//// Handling user input 
+//// Handling user input
 ////Day 8
 
 // import { StyleSheet, Text, View,TextInput ,Button} from 'react-native'
@@ -772,13 +752,11 @@
 //   return (
 //     <SafeAreaView style={styles.sav}>
 //       <Text style={styles.Text}>Kay re bhai kya cahlu he </Text>
-//       <TextInput 
+//       <TextInput
 //       style={styles.input}
 //       value={text}
 //       onChangeText={(text)=>setText(text)}             // two way binding
 //       placeholder='Enter your name'
-
-
 
 //       //Propertys
 //       // multiline
@@ -815,56 +793,112 @@
 //   }
 // })
 
-
-
 ////=======================================================//===============================//====================================
-//// Day 9
+// //// Day 9
 
-//// Navigation in React Native
+// //// Navigation in React Native
 
-//// Stack Navigation
-//// React Navigation library use for navigation in react native
-////run in cmd
+// //// Stack Navigation
+// //// React Navigation library use for navigation in react native
+// ////run in cmd
+// //// npm install @react-navigation/native
+// //// npm install react-native-screens react-native-safe-area-context
+// //// npm install @react-navigation/stack
+
+// //// what we learn in navigation
+// //// 1. Stack Navigation
+// //// 2. Passing data between screens
+// //// 3. Header customization
+// //// 4. Handling navigation actions
+// //// 5. Setting up Global navigation options
+
+
+///// we use file in src/Screen (Home.jsx , Login.jsx , Profile.jsx)
+
+
+// ////https://reactnavigation.org/docs/stack-navigator/#options  for more options in stack navigator
+
+
+// import React from 'react';
+// import { View, Text, StyleSheet } from 'react-native';
+// import Home from './src/Screen/Home';
+// // import { SafeAreaView } from 'react-native-safe-area-context';
+// import Login from './src/Screen/Login';
+// import Profile from './src/Screen/Profile';
+// import { createStackNavigator } from '@react-navigation/stack';
+// import { NavigationContainer } from '@react-navigation/native';
+// import 'react-native-gesture-handler';
+// import { GestureHandlerRootView } from 'react-native-gesture-handler';
+
+// const Stack = createStackNavigator();
+
+// const StackNavigator = () => {
+//   return (
+//     <Stack.Navigator 
+//     screenOptions={{headerStyle:{backgroundColor:"skyblue"}}}  // it was use for set globel header bar style 
+//     >
+
+//       {/* initialRouteName='Login' it was use for set the first screen */}
+//       {/*but now alredy it was home beacuse it was on 1 */}
+//       <Stack.Screen
+//         name="Home"
+//         component={Home}
+//         options={{ headerShown: false }}        // it was use for hide the header bar
+//       />
+//       <Stack.Screen
+//           name="Profile"
+//           component={Profile}
+//           options={{}}        
+//       />
+//       <Stack.Screen
+//         name="Login"
+//         component={Login}
+//         options={{ title: "Login screen" }}        // it was use for set the title of header bar
+//       />
+//     </Stack.Navigator>
+//   );
+// };
+
+// const App = () => {
+//   return (
+//     // we have to wrap NavigationContainer in GestureHandlerRootView for avoid the error
+//     <GestureHandlerRootView>
+//       <NavigationContainer>
+//         <StackNavigator />
+//       </NavigationContainer>
+//     </GestureHandlerRootView>
+//   );
+// };
+
+// const styles = StyleSheet.create({});
+
+// export default App;
+
+// ///======================================================//===============================//====================================
+//// Day 10
+//// Tab Navigation
+
+//// we use file in src/Screen (Home.jsx , Login.jsx , Profile.jsx)
+
+//// run in cmd
 //// npm install @react-navigation/native
+//// npm install react-native-gesture-handler
 //// npm install react-native-screens react-native-safe-area-context
-//// npm install @react-navigation/stack
-
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import Home from './src/Screen/Home';
-// import { SafeAreaView } from 'react-native-safe-area-context';
-import Login from './src/Screen/Login';
-import Coustm from './src/Screen/Coustm';
-import { createStackNavigator } from '@react-navigation/stack';
-import { NavigationContainer } from '@react-navigation/native';
-import 'react-native-gesture-handler';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
+//// npm install @react-navigation/bottom-tabs
 
 
 
-const Stack = createStackNavigator();
-
-const StackNavigator = () => {
-  return(
-    <Stack.Navigator>
-      <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="Coustm" component={Coustm} />
-    </Stack.Navigator>
-  )
-}
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
 
 const App = () => {
   return (
-    // Bas isko yahan add karna hai
-    <GestureHandlerRootView style={{ flex: 1 }}> 
-      <NavigationContainer>
-        <StackNavigator />
-      </NavigationContainer>
-    </GestureHandlerRootView>
-  );
-};
+    <View>
+      <Text>App</Text>
+    </View>
+  )
+}
 
-const styles = StyleSheet.create({});
+export default App
 
-export default App;
+const styles = StyleSheet.create({})
