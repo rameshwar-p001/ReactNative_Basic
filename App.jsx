@@ -877,25 +877,89 @@
 // ///======================================================//===============================//====================================
 //// Day 10
 //// Tab Navigation
+//// learn about icon material 
 
 //// we use file in src/Screen (Home.jsx , Login.jsx , Profile.jsx)
 
-//// run in cmd
+//// run in cmd for tab navigation
 //// npm install @react-navigation/native
 //// npm install react-native-gesture-handler
 //// npm install react-native-screens react-native-safe-area-context
 //// npm install @react-navigation/bottom-tabs
 
 
+//// run in cmd for icon material
+//// npm install @react-native-vector-icons/material-icons
+/// npm install react-native-vector-icons
+
+
+////Apne project mein android/app/build.gradle file ko kholein.
+//// File ke sabse neeche (bottom mein), yeh line add kar dein:
+//// apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+
+
+//// for more options in bottom tab navigator
+//// https://reactnavigation.org/docs/bottom-tab-navigator/#tabbaroptions 
+
+
+//// What we learn in Tab Navigation
+//// 1. 
 
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
+import Home from './src/Screen/Home';
+import Login from './src/Screen/Login';
+import Profile from './src/Screen/Profile'; 
+import Icon from 'react-native-vector-icons/Entypo';
+
+
+const Tab = createBottomTabNavigator();
+const TabNavigator = () => {
+  return (
+    <Tab.Navigator
+      screenOptions={{tabBarStyle:{backgroundColor:"skyblue"}}}  // it was use for set globel tab bar style
+    
+    >
+      <Tab.Screen
+       name="Home"
+       component={Home}
+       options={{headerShown:false , // it was use for hide the header bar
+        tabBarActiveTintColor:"red",  // it was use for set the active tab color
+         tabBarIcon: ({size,color}) => (
+            <Icon name="home" color="black" size={30} />
+          )
+      }}
+      /> 
+      <Tab.Screen
+       name="Profile"
+       component={Profile}
+       options={{tabBarInactiveTintColor:"green" ,  // it was use for set the inactive tab color
+        tabBarIcon: ({size,color}) => (
+            <Icon name="user" color="black" size={30} />
+          )}}   
+      />
+      <Tab.Screen
+        name="Login"
+        component={Login}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Icon name="login" color="black" size={30} />
+          )
+        }}
+      />
+    </Tab.Navigator>
+  );
+}
+
 
 const App = () => {
   return (
-    <View>
-      <Text>App</Text>
-    </View>
+    
+    <NavigationContainer>
+      <TabNavigator />
+    </NavigationContainer>
   )
 }
 
