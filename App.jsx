@@ -903,66 +903,96 @@
 
 
 //// What we learn in Tab Navigation
-//// 1. 
+//// 1. Bottom Tab Navigation setup
+//// 2. Customizing Tab Bar
+//// 3. Adding Icons to Tabs
+//// 4. Handling Tab Navigation actions
+//// 5. Setting up Global Tab navigation options
+
+// import { StyleSheet, Text, View } from 'react-native'
+// import React from 'react'
+// import { createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+// import { NavigationContainer } from '@react-navigation/native';
+// import Home from './src/Screen/Home';
+// import Login from './src/Screen/Login';
+// import Profile from './src/Screen/Profile'; 
+// import Icon from 'react-native-vector-icons/Entypo';
+
+
+// const Tab = createBottomTabNavigator();
+// const TabNavigator = () => {
+//   return (
+//     <Tab.Navigator
+//       screenOptions={{tabBarStyle:{backgroundColor:"skyblue"}}}  // it was use for set globel tab bar style
+    
+//     >
+//       <Tab.Screen
+//        name="Home"
+//        component={Home}
+//        options={{headerShown:false , // it was use for hide the header bar
+//         tabBarActiveTintColor:"red",  // it was use for set the active tab color
+//          tabBarIcon: ({size,color}) => (
+//             <Icon name="home" color="black" size={30} />
+//           )
+//       }}
+//       /> 
+//       <Tab.Screen
+//        name="Profile"
+//        component={Profile}
+//        options={{tabBarInactiveTintColor:"green" ,  // it was use for set the inactive tab color
+//         tabBarIcon: ({size,color}) => (
+//             <Icon name="user" color="black" size={30} />
+//           )}}   
+//       />
+//       <Tab.Screen
+//         name="Login"
+//         component={Login}
+//         options={{
+//           tabBarIcon: ({ color, size }) => (
+//             <Icon name="login" color="black" size={30} />
+//           )
+//         }}
+//       />
+//     </Tab.Navigator>
+//   );
+// }
+
+
+// const App = () => {
+//   return (
+    
+//     <NavigationContainer>
+//       <TabNavigator />
+//     </NavigationContainer>
+//   )
+// }
+
+// export default App
+
+// const styles = StyleSheet.create({})
+
+
+
+// ======================================================//===============================//====================================
+//// Day 11
+//// we have now doing project 
+//// 
 
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import { NavigationContainer } from '@react-navigation/native';
-import Home from './src/Screen/Home';
-import Login from './src/Screen/Login';
-import Profile from './src/Screen/Profile'; 
-import Icon from 'react-native-vector-icons/Entypo';
-
-
-const Tab = createBottomTabNavigator();
-const TabNavigator = () => {
-  return (
-    <Tab.Navigator
-      screenOptions={{tabBarStyle:{backgroundColor:"skyblue"}}}  // it was use for set globel tab bar style
-    
-    >
-      <Tab.Screen
-       name="Home"
-       component={Home}
-       options={{headerShown:false , // it was use for hide the header bar
-        tabBarActiveTintColor:"red",  // it was use for set the active tab color
-         tabBarIcon: ({size,color}) => (
-            <Icon name="home" color="black" size={30} />
-          )
-      }}
-      /> 
-      <Tab.Screen
-       name="Profile"
-       component={Profile}
-       options={{tabBarInactiveTintColor:"green" ,  // it was use for set the inactive tab color
-        tabBarIcon: ({size,color}) => (
-            <Icon name="user" color="black" size={30} />
-          )}}   
-      />
-      <Tab.Screen
-        name="Login"
-        component={Login}
-        options={{
-          tabBarIcon: ({ color, size }) => (
-            <Icon name="login" color="black" size={30} />
-          )
-        }}
-      />
-    </Tab.Navigator>
-  );
-}
-
+import { SafeAreaView } from 'react-native-safe-area-context'
+import Home from './src/Project-file/Home'
 
 const App = () => {
   return (
-    
-    <NavigationContainer>
-      <TabNavigator />
-    </NavigationContainer>
+    <SafeAreaView>
+      <Home/>
+    </SafeAreaView>
   )
 }
 
 export default App
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+
+})
