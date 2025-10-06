@@ -7,7 +7,13 @@ import Create from './Create'
 
 
 
-const data = [
+
+
+
+const Home = () => {
+
+    const [view, setview] = useState(0)
+    const [data, setdata] = useState([
   { id: 1, name: "Apple", stock: 120, unit: "kg" },
   { id: 2, name: "Banana", stock: 85, unit: "dozen" },
   { id: 3, name: "Rice", stock: 500, unit: "kg" },
@@ -18,12 +24,7 @@ const data = [
   { id: 8, name: "Salt", stock: 300, unit: "kg" },
   { id: 9, name: "Tea", stock: 90, unit: "box" },
   { id: 10, name: "Oil", stock: 75, unit: "litre" },
-];
-
-
-const Home = () => {
-
-    const [view, setview] = useState(0)
+])
   return (
    <SafeAreaView style={styles.contenner}>
     <Text style={styles.text}>DashBoard</Text>
@@ -41,7 +42,7 @@ const Home = () => {
 
     {view===0 && <Allitem data={data} />}
     {view===1 && <Lowstock data={data.filter((item)=> item.stock<100)}/>}
-    {view===2 && <Create />}
+    {view === 2 && <Create data={data} setdata={setdata} />}
    </SafeAreaView>
 
 

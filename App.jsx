@@ -975,8 +975,19 @@
 
 // ======================================================//===============================//====================================
 //// Day 11
-//// we have now doing project 
-//// 
+//// we have now doing project
+
+//// we use file in src/Project-file (Home.jsx , Allitem.jsx , Create.jsx , Lowstock.jsx,)
+
+//// we learn in this project
+//// 1. React Native Components
+//// 2. Styling and Theming
+//// 3. Flexbox Layout
+//// 4. Navigation (Stack and Tab)
+//// 5. State Management with Hooks
+//// 6. Handling User Input
+//// 7. List Rendering with FlatList
+//// 8. Responsive Design
 
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
