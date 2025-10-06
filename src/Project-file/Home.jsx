@@ -7,7 +7,7 @@ import Create from './Create'
 
 
 
-const products = [
+const data = [
   { id: 1, name: "Apple", stock: 120, unit: "kg" },
   { id: 2, name: "Banana", stock: 85, unit: "dozen" },
   { id: 3, name: "Rice", stock: 500, unit: "kg" },
@@ -28,21 +28,22 @@ const Home = () => {
    <SafeAreaView style={styles.contenner}>
     <Text style={styles.text}>DashBoard</Text>
     <View style={styles.buttoncontainer}>
-        <Pressable style={[styles.button , view=== 0 ? {backgroundColor:"red"} : null]} onPress={()=>setview(0)}>
-            <Text style={styles.btntxt}>All Item </Text>
+        <Pressable style={[styles.button , view=== 0 ? {backgroundColor:"#72C37AFF"} : null]} onPress={()=>setview(0)}>
+            <Text style={[styles.btntxt ,view=== 0 ? {color:"white"} : null]}>All Item </Text>
         </Pressable>
-        <Pressable style={[styles.button , view=== 1 ? {backgroundColor:"red"} : null]} onPress={()=>setview(1)}>
-            <Text style={styles.btntxt}>Low Stock</Text>
+        <Pressable style={[styles.button , view=== 1 ? {backgroundColor:"#72C37AFF"} : null]} onPress={()=>setview(1)}>
+            <Text style={[styles.btntxt,view=== 1 ? {color:"white"} : null]}>Low Stock</Text>
         </Pressable>
-        <Pressable style={[styles.button , view=== 2 ? {backgroundColor:"red"} : null]} onPress={()=>setview(2)}>
-            <Text style={styles.btntxt}>Create</Text>
+        <Pressable style={[styles.button , view=== 2 ? {backgroundColor:"#72C37AFF"} : null]} onPress={()=>setview(2)}>
+            <Text style={[styles.btntxt,view=== 2 ? {color:"white"} : null]}>Create</Text>
         </Pressable>
     </View>
 
-    {view===0 && <Allitem/>}
-    {view===1 && <Lowstock/>}
-    {view===2 && <Create/>}
+    {view===0 && <Allitem data={data} />}
+    {view===1 && <Lowstock data={data.filter((item)=> item.stock<100)}/>}
+    {view===2 && <Create />}
    </SafeAreaView>
+
 
 
   )
@@ -63,12 +64,13 @@ const styles = StyleSheet.create({
         marginTop:50,   
     },
     buttoncontainer:{
+        marginHorizontal:10,
         gap:20,
         flexDirection:"row",
         marginTop:20
     },
     button:{
-        borderColor:"black",
+        borderColor:"#72C37AFF",
         borderWidth:0.8,
         borderRadius:20,
         paddingHorizontal:10,
@@ -79,3 +81,4 @@ const styles = StyleSheet.create({
         fontSize:13
     }
 })
+

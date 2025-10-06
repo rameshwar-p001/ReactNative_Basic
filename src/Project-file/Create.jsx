@@ -3,7 +3,7 @@ import React from 'react'
 
 const Create = () => {
   return (
-    <View>
+    <View >
       <Text>Create</Text>
     </View>
   )
@@ -11,4 +11,4 @@ const Create = () => {
 
 export default Create
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({}) 
